@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #000;
+    --fg: #fff;
+    --gris: #888;
+    --borde: #222;
+    --hover: #111;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+/* INTRO */
+.intro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.logo {
+    width: 220px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.intro h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.intro p {
+    color: var(--gris);
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+}
+
+.btn {
+    margin-top: 3rem;
+    padding: 1.1rem 3rem;
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--hover);
+    border-color: #555;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2.5rem;
+    border-bottom: 1px solid var(--borde);
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 10;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: var(--fg);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+}
+
+.brand-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.back {
+    color: var(--gris);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.back:hover {
+    color: var(--fg);
+}
+
+/* PRÁCTICAS */
+.practicas {
+    padding: 5rem 2.5rem 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.practicas h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.8rem;
+}
+
+.subtitulo {
+    color: var(--gris);
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.2rem;
+}
+
+.card {
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 1.8rem;
+    text-decoration: none;
+    color: var(--fg);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.card:hover {
+    background: var(--hover);
+    border-color: #444;
+    transform: translateY(-3px);
+}
+
+.card .num {
+    font-size: 0.85rem;
+    color: var(--gris);
+    font-family: monospace;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--gris);
+}
+
+/* DETALLE DE PRÁCTICA */
+.practica-detalle {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem 5rem;
+}
+
+.detalle-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.detalle-header .num {
+    font-size: 0.85rem;
+    color: var(--gris);
+    font-family: monospace;
+}
+
+.detalle-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    flex: 1;
+}
+
+.btn-abrir {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+.btn-abrir:hover {
+    background: var(--hover);
+    border-color: #555;
+}
+
+.visor {
+    width: 100%;
+    height: calc(100vh - 220px);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0a0a0a;
+}
+
+.visor iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
